@@ -15,7 +15,7 @@ the topics of this blog include but are not limited to:
 - Reversing
 - Forensic
 - Machine learning
-- Usefull scripts in Pyhton/Powershell
+- Usefull scripts in Python/Powershell
 - Golang Projects
 
 
