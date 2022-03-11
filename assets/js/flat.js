@@ -13,7 +13,7 @@ $(window).load(function() {
         });
         MESSAGES.push({
             delay: 3000,
-            text: '<br><a href="mailto:leak-alert@user-security.net"> Email me</a> ||  <a href="https://twitter.com/CyberOrSo">Contact me on Twitter</a>'
+            text: '<br><a href="mailto:leak-protection@user-security.net"> Email me</a> ||  <a href="https://twitter.com/CyberOrSo">Contact me on Twitter</a>'
         });
         
         
