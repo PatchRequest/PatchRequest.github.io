@@ -13,10 +13,10 @@ $(window).load(function() {
         });
         MESSAGES.push({
             delay: 3000,
-            text: '<br><a href="mailto:leak-protection@user-security.net"> Email me</a> ||  <a href="https://twitter.com/CyberOrSo">Contact me on Twitter</a>'
+            text: '<br><a href="mailto:leak-protection@user-security.net"> Email me</a> ||  <a href="https://twitter.com/CyberOrSo">Contact me on Twitter</a> || <a href="https://paypal.me/DanielRiebel"> Help fund this project </a>'
         });
         
-        
+         
         $container = $('#container');
         $message = $('#message');
         $animate = $('#animate');
@@ -27,7 +27,7 @@ $(window).load(function() {
                 probability: 0.0,
                 glitches: '-|/\\',
                 blank: '',
-                duration: text.length * 40,
+                duration: text.length * 30,
                 ease: 'easeInOutQuad',
                 delay: 0
             };
