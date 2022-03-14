@@ -9,7 +9,7 @@ $(window).load(function() {
         });
         MESSAGES.push({
             delay: 800,
-            text: 'Making the internet a safer space <br>Alerted >100,000 people already!'
+            text: 'Making the internet a safer space <br>Alerted >250,000 people already!'
         });
         MESSAGES.push({
             delay: 3000,
