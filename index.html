@@ -3,36 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Beware .zip Domains</title>
+  <title>Beware .zip Domains - Synthwave Neon</title>
   <style>
+    /* Base dark theme with refined synthwave accents */
     body {
-      font-family: sans-serif;
-      background: #f0f0f0;
       margin: 0;
       padding: 0;
+      background: #000;
+      color: #e0e0e0;
+      font-family: 'Roboto Mono', monospace;
     }
+    /* Header with a solid grey background */
     header {
-      background: #c0392b;
-      color: #fff;
       text-align: center;
-      padding: 1rem;
+      padding: 2rem 1rem;
+      background: #333;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
     }
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      color: #fff;
+      text-shadow: 1px 1px 3px rgba(255, 211, 25, 0.6);
+    }
+    /* Content container with a dark background, subtle border, and soft neon shadow */
     .content {
       max-width: 800px;
       margin: 2rem auto;
-      background: #fff;
-      padding: 1.5rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      background: #1a1a1a;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(255, 41, 117, 0.3);
     }
+    /* Paragraphs with a light, understated neon hint */
+    p {
+      line-height: 1.6;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 1px 1px 2px rgba(255, 211, 25, 0.3);
+    }
+    /* Inline code styled with a refined neon magenta accent */
     code {
-      background: #eee;
-      padding: 0.2rem 0.4rem;
-      border-radius: 3px;
+      background: #222;
+      padding: 0.3rem 0.5rem;
+      border-radius: 4px;
       font-family: monospace;
+      color: #ff2975;
+      border: 1px solid #ff2975;
     }
+    /* Warning text using neon orange with a gentle shadow */
     .warning {
-      color: #e74c3c;
+      color: #ff901f;
       font-weight: bold;
+      text-shadow: 1px 1px 2px rgba(255, 144, 31, 0.5);
+    }
+    /* Social icons container */
+    footer {
+      max-width: 800px;
+      margin: 2rem auto;
+      text-align: center;
+    }
+    .social {
+      display: inline-flex;
+      gap: 1rem;
+    }
+    .social a {
+      color: #ff2975;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+    .social a:hover {
+      transform: scale(1.1);
+    }
+    .social svg {
+      width: 32px;
+      height: 32px;
+      fill: currentColor;
     }
   </style>
 </head>
@@ -42,17 +88,44 @@
   </header>
   <div class="content">
     <p>
-      Malicious actors can obfuscate URLs using deceptive domains. For instance, the URL:
+      Malicious actors can now exploit the fact that <code>.zip</code> is a TDL domain—not just a file type.
+      This means attackers can craft URLs that appear to be pointing to a trusted ZIP download,
+      while in reality they are using a domain to facilitate phishing attacks.
+    </p>
+    <p>
+      In our example, the URL below demonstrates one such abuse:
     </p>
     <p>
       <code>https://github.com∕microsoft∕TeamsHelper∕Download∕@UpdateHelper.zip</code>
     </p>
     <p>
-      may appear as a trusted GitHub resource but actually resolves to <code>updatehelper.zip</code>.
+      Here, everything before the <code>@</code> is treated as a username. Attackers can leverage this behavior
+      to disguise a malicious URL as a legitimate resource. Although this URL appears to be a GitHub download link,
+      the <code>.zip</code> TDL can mislead users into thinking they are accessing a trusted ZIP file.
+      Similar techniques can be used in other ways to bypass basic visual inspection.
     </p>
     <p class="warning">
-      Always verify URL destinations and use URL parsing tools to detect such deceptions.
+      Security Tip: Always verify the final URL destination using trusted tools before downloading or executing content.
+    </p>
+    <p>
+      For more technical insights follow me on social media:
     </p>
   </div>
+  <footer>
+    <div class="social">
+      <a href="https://x.com/PatchRequest" target="_blank" aria-label="X (Twitter)">
+        <!-- X (formerly Twitter) Icon SVG -->
+        <svg viewBox="0 0 24 24">
+          <path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 001.88-2.37 8.59 8.59 0 01-2.72 1.04 4.28 4.28 0 00-7.3 3.9 12.14 12.14 0 01-8.82-4.47 4.28 4.28 0 001.32 5.71 4.24 4.24 0 01-1.94-.54v.05a4.28 4.28 0 003.44 4.19 4.28 4.28 0 01-1.93.07 4.28 4.28 0 004 2.97A8.59 8.59 0 012 19.54 12.11 12.11 0 008.29 21c7.55 0 11.68-6.26 11.68-11.68 0-.18 0-.35-.01-.53A8.35 8.35 0 0022.46 6z"></path>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/daniel-riebel/" target="_blank" aria-label="LinkedIn">
+        <!-- LinkedIn Icon SVG -->
+        <svg viewBox="0 0 24 24">
+          <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zM8 8h3.84v2.08h.05c.54-1 1.87-2.08 3.84-2.08 4.11 0 4.87 2.7 4.87 6.21V24h-4v-7.86c0-1.88-.03-4.3-2.62-4.3-2.63 0-3.1 2.05-3.1 4.16V24h-4V8z"></path>
+        </svg>
+      </a>
+    </div>
+  </footer>
 </body>
 </html>
